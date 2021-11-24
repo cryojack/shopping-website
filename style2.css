@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+/* @import url('https://fonts.googleapis.com/css2?family=Praise&display=swap'); 
+
+font-family: 'Praise', cursive;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/***************************************
+*            Global styles             *
+****************************************/
+
+body {
+    font-size: 25px;
+}
+
+/***************************************
+*            Header styles             *
+****************************************/
+
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10vh;
+    top: 0px;
+    width: 100%;
+    z-index: 99;
+    background-color: rgb(53, 59, 110);
+}
+
+/* Header Logo */
+
+.logo {
+    flex: 4;
+    cursor: pointer;
+}
+
+.logo span {
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0px 0px 0px 40px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Header Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 2;
+}
+
+.navbar li {
+    list-style-type: none;
+}
+
+.navbar .nav-link {
+    font-size: 23px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Header Cart */
+
+.cart {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.cart-icon {
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+}
+
+.cart-item-number {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    top: -10px;
+    left: 55%;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    background-color: red;
+}
+
+/***************************************
+*         Main Section styles          *
+****************************************/
+
+.main-section {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 10vh;
+    width: 100%;
+    height: 300vh;
+    overflow-y: auto;
+}
+
+/* Main section Sidebar */
+
+.sidebar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgb(184, 181, 175);
+}
+
+/* Sidebar Categories */
+
+.sidebar .category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+    font-size: 25px;
+    line-height: 32px;
+    cursor: pointer;
+    color: rgb(37, 35, 35);
+}
+
+.sidebar .category:hover {
+    background-color:whitesmoke;
+    font-size: 28px;
+    transition: 0.1s ease-in;
+}
+
+.sidebar .category:focus {
+    background-color:whitesmoke;
+    font-size: 28px;
+    outline: none;
+}
+
+.category .cta-desc {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Sidebar scroll */
+
+.sidebar::-webkit-scrollbar {
+    width: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background-color: rgb(218, 210, 210);
+    box-shadow: inset 0px 0px 5px rgba(141,141,141,0.75);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgb(121, 118, 118);
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(73, 73, 73);
+}
+
+/* Main section Mainarea */
+
+.mainarea {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 85%;
+    height: 100%;
+    padding: 5px;
+}
+
+/* Mainarea Search */
+
+.mainarea .search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 10vh;
+    max-height: auto;
+    margin: 5px 0px;
+}
+
+.search .search-input {
+    position: absolute;
+    width: 30%;
+    height: 50px;
+    border-radius: 30px;
+    padding: 20px;
+    font-size: 24px;
+    margin: 10px 5px;
+    border-style: none;
+    background-color: rgb(224, 216, 216);
+}
+
+.search .search-icon {
+    position: absolute;
+    left: 62%;
+    cursor: pointer;
+    color: rgb(145, 142, 142);
+}
+
+.search .search-input:focus {
+    outline: solid 2px rgb(109, 107, 107);
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+}
+
+/* On sale section */
+
+.on-sale {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+    max-height: auto;
+    width: 100%;
+    margin: 5px 0px;
+    background-color: rgb(226, 221, 221);
+}
+
+.on-sale .sale-banner {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.on-sale .sale-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+    margin: 10px 0px;
+}
+
+/* Available section */
+
+.available {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: auto;
+    max-height: auto;
+    margin: 5px 0px;
+    overflow-y: auto;
+    background-color: rgb(226, 221, 221);
+}
+
+.available .avail-banner {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.available .avail-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    margin: 10px 0px;
+}
+
+.avail-wrapper .avail-row-4 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Item card */
+
+.item-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 550px;
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(204, 200, 200);
+}
+
+.item-card .item-card-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 320px;
+    object-fit: contain;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 2px auto 2px auto;
+}
+
+.item-card .item-card-title {
+    font-size: 26px;
+}
+
+.item-card .item-card-desc {
+    font-size: 18px;
+    overflow: hidden;
+}
+
+.item-card .item-card-price {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.item-card .item-card-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.item-card .item-card-add-button {
+    font-size: 21px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    width: 45%;
+    margin: 0 5px;
+    padding: 1px 2px;
+    background-color: rgb(11, 78, 11);
+    color: white;
+    cursor: pointer;
+}
+
+.item-card .item-card-add-button:hover {
+    background-color: green;
+}
+
+.item-card .item-card-detail-button {
+    font-size: 21px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    width: 45%;
+    margin: 0 5px;
+    padding: 1px 2px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    cursor: pointer;
+}
+
+.item-card .item-card-detail-button:hover {
+    background-color: rgb(218, 213, 213);
+}
+
+/* Page no section */
+
+.page-no {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.page-no a {
+    text-decoration: none;
+    margin: 0px 5px;
+}
+
+/***************************************
+*            Footer styles             *
+***************************************/
+
+.footer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 300vh;
+    min-height: 15vh;
+    width: 100%;
+    background-color: rgb(32, 31, 31);
+}
+
+/* Footer Credits */
+
+.credits {
+    display: flex;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+}
+
+/* Footer Contact me */
+
+.contact-me ul {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-me li {
+    list-style-type: none;
+}
+
+.footer-link {
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Footer Rights */
+
+.rights {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+/* Footer Back to top */
+
+.back-to-top {
+    font-size: 15px;
+    text-align: center;
+}
+
+.back-to-top a {
+    text-decoration: none;
+    color: white;
+}
